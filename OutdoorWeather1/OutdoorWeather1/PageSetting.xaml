@@ -1,0 +1,102 @@
+﻿<Page x:Class="OutdoorWeather1.PageSetting"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OutdoorWeather1"
+      mc:Ignorable="d" 
+      d:DesignHeight="250" d:DesignWidth="200"
+      Title="PageSetting">
+    <Page.Resources>
+        <Style x:Key="ComboboxButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType = "Button">
+                        <Border Name="Border" BorderThickness="0"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation To="0.4"
+                                        Storyboard.TargetProperty="Opacity"
+                                        Duration="0:0:0.800" AutoReverse="True"
+                                        RepeatBehavior="Forever"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation To="1"
+                                        Storyboard.TargetProperty="Opacity"
+                                        Duration="0:0:0.800"/>
+                                        <DoubleAnimation To="23"
+Storyboard.TargetProperty="Width"
+Duration="0:0:0.10"/>
+                                        <DoubleAnimation To="18"
+Storyboard.TargetProperty="Height"
+Duration="0:0:0.10" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Button.Click">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation To="21"
+                                        Storyboard.TargetProperty="Width"
+                                        Duration="0:0:0.10"/>
+                                        <DoubleAnimation To="16"
+                                        Storyboard.TargetProperty="Height"
+                                        Duration="0:0:0.10" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <TextBlock Text="Добавьте город в котором вы бы хотели видеть погоду" Margin="0,50,0,0" Width="150" Height="25"
+                   HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Text="вы бы хотели видеть погоду" Margin="0,65,0,0" Width="155" Height="25"
+                   HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ExeptionMessage"
+TextWrapping="Wrap"
+     Width="120" 
+     VerticalAlignment="Center"
+     HorizontalAlignment="Center"
+     Margin="0,50,0,0" Foreground="Red"/>
+        <TextBox Name="CityName" Margin="0,100,0,0"
+     HorizontalAlignment="Center"
+          TextWrapping="Wrap"
+          Text="Введите город"
+          VerticalAlignment="Center"
+          Width="120" BorderBrush="Black"/>
+        <Button x:Name ="Triger"
+ Style="{DynamicResource ComboboxButton}"
+ HorizontalAlignment="Center"
+ Margin="97,100,0,0"
+ VerticalAlignment="Center"
+ Height="18" Width="23" IsDefault="True" Opacity="1">
+            <Button.Background>
+                <ImageBrush ImageSource="/EnterButton.png" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Border HorizontalAlignment="Left" Height="250" VerticalAlignment="Top" Width="200" Opacity="0.2">
+            <Border.Effect>
+                <BlurEffect Radius="19" KernelType="Gaussian" RenderingBias="Quality"/>
+            </Border.Effect>
+            <Border.Background>
+                <ImageBrush ImageSource="/PageBackground.png" Stretch="None"/>
+            </Border.Background>
+
+        </Border>
+    </Grid>
+</Page>

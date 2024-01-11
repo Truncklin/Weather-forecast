@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Net;
 using System.Windows;
+using System.Windows.Controls;
 using Newtonsoft.Json;
 
 namespace OutdoorWeather1
@@ -23,6 +24,14 @@ namespace OutdoorWeather1
                 try { Temp.Text = WeatherTemp(CityName.Text); }
                 catch { ExeptionMessage.Text = "Не найдено"; }
 
+            };
+            ButtonSettings.Click += (sender, e) =>
+            {
+                new WindowSetting().ShowDialog();
+                Frame frame = new Frame();
+                WindowSetting.Current.Content = frame;
+                frame.Navigate(typeof(MainPage));
+                Window.Current.Activate();
             };
         }
         public string WeatherTemp(string city)

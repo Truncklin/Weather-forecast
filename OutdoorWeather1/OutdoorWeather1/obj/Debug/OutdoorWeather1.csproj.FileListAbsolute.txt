@@ -34,3 +34,5 @@ C:\Users\holli\Source\Repos\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj
 C:\Users\holli\Source\Repos\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\OutdoorWeather1.csproj.CopyComplete
 C:\Users\holli\Source\Repos\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\OutdoorWeather1.exe
 C:\Users\holli\Source\Repos\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\OutdoorWeather1.pdb
+C:\Users\holli\source\repos\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\WindowSetting.g.cs
+C:\Users\holli\source\repos\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\WindowSetting.baml

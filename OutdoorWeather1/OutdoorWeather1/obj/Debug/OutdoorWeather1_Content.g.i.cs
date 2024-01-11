@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("settingicon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pagebackground.png")]
 
 

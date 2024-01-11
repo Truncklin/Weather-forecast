@@ -34,17 +34,22 @@
                                         <DoubleAnimation To="1"
                                         Storyboard.TargetProperty="Opacity"
                                         Duration="0:0:0.800"/>
+                                        <DoubleAnimation To="23"
+Storyboard.TargetProperty="Width"
+Duration="0:0:0.10"/>
+                                        <DoubleAnimation To="18"
+Storyboard.TargetProperty="Height"
+Duration="0:0:0.10" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
                             <EventTrigger RoutedEvent="Button.Click">
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation To="28"
+                                        <DoubleAnimation To="21"
                                         Storyboard.TargetProperty="Width"
-                                        Duration="0:0:0.10" 
-                                        x:Name="WidthAnimation"/>
-                                        <DoubleAnimation To="28"
+                                        Duration="0:0:0.10"/>
+                                        <DoubleAnimation To="16"
                                         Storyboard.TargetProperty="Height"
                                         Duration="0:0:0.10" />
                                     </Storyboard>
@@ -57,6 +62,11 @@
         </Style>
     </Window.Resources>
     <Grid>
+        <Frame x:Name="FrameSetting" VerticalAlignment="Center" HorizontalAlignment="Center"
+               Margin="150,-100,0,0"
+               Width="160" Height="196">
+
+        </Frame>
         <TextBlock x:Name="Temp"
             TextWrapping="Wrap"
                  Width="120" 
@@ -117,6 +127,13 @@
                                                 <DoubleAnimation To="1"
                             Storyboard.TargetProperty="Opacity"
                             Duration="0:0:0.800"/>
+                                                <DoubleAnimation To="30"
+Storyboard.TargetProperty="Width"
+Duration="0:0:0.10" 
+x:Name="WidthAnimation"/>
+                                                <DoubleAnimation To="30"
+Storyboard.TargetProperty="Height"
+Duration="0:0:0.10" />
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </EventTrigger>
@@ -125,8 +142,7 @@
                                             <Storyboard>
                                                 <DoubleAnimation To="28"
                             Storyboard.TargetProperty="Width"
-                            Duration="0:0:0.10" 
-                            x:Name="WidthAnimation"/>
+                            Duration="0:0:0.10" />
                                                 <DoubleAnimation To="28"
                             Storyboard.TargetProperty="Height"
                             Duration="0:0:0.10" />
