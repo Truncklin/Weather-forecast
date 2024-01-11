@@ -6,6 +6,56 @@
         xmlns:local="clr-namespace:OutdoorWeather1"
         mc:Ignorable="d"
         Title="OutdoorWeather" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Window.Resources>
+        <Style x:Key="ComboboxButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType = "Button">
+                        <Border Name="Border" BorderThickness="0"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation To="0.4"
+                                        Storyboard.TargetProperty="Opacity"
+                                        Duration="0:0:0.800" AutoReverse="True"
+                                        RepeatBehavior="Forever"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation To="1"
+                                        Storyboard.TargetProperty="Opacity"
+                                        Duration="0:0:0.800"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Button.Click">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation To="28"
+                                        Storyboard.TargetProperty="Width"
+                                        Duration="0:0:0.10" 
+                                        x:Name="WidthAnimation"/>
+                                        <DoubleAnimation To="28"
+                                        Storyboard.TargetProperty="Height"
+                                        Duration="0:0:0.10" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <TextBlock x:Name="Temp"
             TextWrapping="Wrap"
@@ -22,13 +72,73 @@
                  TextWrapping="Wrap"
                  Text="Введите город"
                  VerticalAlignment="Center"
-                 Width="120"/>
+                 Width="120" BorderBrush="Black"/>
         <Button x:Name ="Triger"
-            Content="->"
-                HorizontalAlignment="Center"
-                Margin="100,0,0,0"
-                VerticalAlignment="Center"
-                Height="18" Width="21"/>
-
+        Style="{DynamicResource ComboboxButton}"
+        HorizontalAlignment="Center"
+        Margin="97,0,0,0"
+        VerticalAlignment="Center"
+        Height="18" Width="23" IsDefault="True" Opacity="1">
+            <Button.Background>
+                <ImageBrush ImageSource="/EnterButton.png" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ButtonSettings" HorizontalAlignment="Right" 
+                VerticalAlignment="Top" Height="30" Width="30" Margin="15"
+                BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.Background>
+                <ImageBrush Stretch="Fill" ImageSource="/SettingIcon.png"/>
+            </Button.Background>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType = "Button">
+                                <Border Name="Border" BorderThickness="0"
+                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <EventTrigger RoutedEvent="MouseEnter">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation To="0.4"
+                            Storyboard.TargetProperty="Opacity"
+                            Duration="0:0:0.800" AutoReverse="True"
+                            RepeatBehavior="Forever"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                    <EventTrigger RoutedEvent="MouseLeave">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation To="1"
+                            Storyboard.TargetProperty="Opacity"
+                            Duration="0:0:0.800"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                    <EventTrigger RoutedEvent="Button.Click">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation To="28"
+                            Storyboard.TargetProperty="Width"
+                            Duration="0:0:0.10" 
+                            x:Name="WidthAnimation"/>
+                                                <DoubleAnimation To="28"
+                            Storyboard.TargetProperty="Height"
+                            Duration="0:0:0.10" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
     </Grid>
 </Window>
