@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
+using System.Net;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Newtonsoft.Json;
 
 namespace OutdoorWeather1
 {
@@ -20,9 +11,17 @@ namespace OutdoorWeather1
     /// </summary>
     public partial class PageSetting : Page
     {
-        public PageSetting()
+        public string Temperature {  get; set; }
+        public PageSetting( Temperature temperature)
         {
             InitializeComponent();
+            Triger.Click += (sender, e) =>
+            {
+                ExeptionMessage.Text = "";
+               // try { Temperature = WeatherTemp(CityName.Text); } catch { ExeptionMessage.Text = "Не найдено"; }
+
+            };
         }
+        
     }
 }

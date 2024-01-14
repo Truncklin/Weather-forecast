@@ -7,65 +7,11 @@
         mc:Ignorable="d"
         Title="OutdoorWeather" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Window.Resources>
-        <Style x:Key="ComboboxButton" TargetType="Button">
-            <Setter Property="OverridesDefaultStyle" Value="True"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType = "Button">
-                        <Border Name="Border" BorderThickness="0"
-                                Background="{TemplateBinding Background}">
-                            <ContentPresenter HorizontalAlignment="Center" 
-                                    VerticalAlignment="Center"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <EventTrigger RoutedEvent="MouseEnter">
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <DoubleAnimation To="0.4"
-                                        Storyboard.TargetProperty="Opacity"
-                                        Duration="0:0:0.800" AutoReverse="True"
-                                        RepeatBehavior="Forever"/>
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger>
-                            <EventTrigger RoutedEvent="MouseLeave">
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <DoubleAnimation To="1"
-                                        Storyboard.TargetProperty="Opacity"
-                                        Duration="0:0:0.800"/>
-                                        <DoubleAnimation To="23"
-Storyboard.TargetProperty="Width"
-Duration="0:0:0.10"/>
-                                        <DoubleAnimation To="18"
-Storyboard.TargetProperty="Height"
-Duration="0:0:0.10" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger>
-                            <EventTrigger RoutedEvent="Button.Click">
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <DoubleAnimation To="21"
-                                        Storyboard.TargetProperty="Width"
-                                        Duration="0:0:0.10"/>
-                                        <DoubleAnimation To="16"
-                                        Storyboard.TargetProperty="Height"
-                                        Duration="0:0:0.10" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
     </Window.Resources>
     <Grid>
         <Frame x:Name="FrameSetting" VerticalAlignment="Center" HorizontalAlignment="Center"
-               Margin="150,-100,0,0"
-               Width="160" Height="196">
-
+               Margin="0,0,0,0"
+               Width="160" Height="196" NavigationUIVisibility="Hidden">
         </Frame>
         <TextBlock x:Name="Temp"
             TextWrapping="Wrap"
@@ -77,22 +23,6 @@ Duration="0:0:0.10" />
          VerticalAlignment="Center"
          HorizontalAlignment="Center"
          Margin="0,-50,0,0"/>
-        <TextBox Name="CityName"
-            HorizontalAlignment="Center"
-                 TextWrapping="Wrap"
-                 Text="Введите город"
-                 VerticalAlignment="Center"
-                 Width="120" BorderBrush="Black"/>
-        <Button x:Name ="Triger"
-        Style="{DynamicResource ComboboxButton}"
-        HorizontalAlignment="Center"
-        Margin="97,0,0,0"
-        VerticalAlignment="Center"
-        Height="18" Width="23" IsDefault="True" Opacity="1">
-            <Button.Background>
-                <ImageBrush ImageSource="/EnterButton.png" Stretch="UniformToFill"/>
-            </Button.Background>
-        </Button>
         <Button x:Name="ButtonSettings" HorizontalAlignment="Right" 
                 VerticalAlignment="Top" Height="30" Width="30" Margin="15"
                 BorderBrush="{x:Null}" Foreground="{x:Null}">

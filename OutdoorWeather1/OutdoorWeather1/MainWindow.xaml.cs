@@ -16,37 +16,15 @@ namespace OutdoorWeather1
         public MainWindow()
         {
             InitializeComponent();
-
-
-            Triger.Click += (sender, e) =>
-            {
-                ExeptionMessage.Text = "";
-                try { Temp.Text = WeatherTemp(CityName.Text); }
-                catch { ExeptionMessage.Text = "Не найдено"; }
-
-            };
+            /*Temperature tmp = new Temperature();
             ButtonSettings.Click += (sender, e) =>
             {
-                new WindowSetting().ShowDialog();
-                Frame frame = new Frame();
-                WindowSetting.Current.Content = frame;
-                frame.Navigate(typeof(MainPage));
-                Window.Current.Activate();
-            };
-        }
-        public string WeatherTemp(string city)
-        {
-            string url = "https://api.openweathermap.org/data/2.5/weather?q=" + city +
-                "&units=metric&appid=24180e81b2418db8708ea2e37d2cd446";
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            string rezult;
-            using (StreamReader streamreader = new StreamReader(response.GetResponseStream()))
-            {
-                rezult = streamreader.ReadToEnd();
-            }
-            SettingResponse settingResponse = JsonConvert.DeserializeObject<SettingResponse>(rezult);
-            return "В городе "+settingResponse.Name +" температура воздуха " +settingResponse.Main.Temp;
+                FrameSetting.Content = new PageSetting();
+                if(tmp == null)
+                {
+
+                }
+            };*/
         }
     }
 }

@@ -58,9 +58,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ForecastWeather.cs" />
     <Compile Include="PageSetting.xaml.cs">
       <DependentUpon>PageSetting.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ResponseApi.cs" />
     <Compile Include="Temperature.cs" />
     <Compile Include="SettingResponse.cs" />
     <Page Include="MainWindow.xaml">
