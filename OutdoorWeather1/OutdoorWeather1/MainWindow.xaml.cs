@@ -12,19 +12,18 @@ namespace OutdoorWeather1
     public partial class MainWindow : Window
     {
 
-
         public MainWindow()
         {
             InitializeComponent();
-            /*Temperature tmp = new Temperature();
             ButtonSettings.Click += (sender, e) =>
             {
                 FrameSetting.Content = new PageSetting();
-                if(tmp == null)
-                {
+            };
 
-                }
-            };*/
+        }
+        public void mapping(string tmp)
+        {
+            Temp.Text = tmp;
         }
     }
 }

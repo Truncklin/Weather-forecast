@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿/*using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,14 +12,16 @@ namespace OutdoorWeather1
     interface Weather
     {
         Weather Clone();
-        string Name();
+        string Name(string s);
         string RespApi();
     }
     internal class ForecastWeather : Weather
     {
-        public string Name()
-        {
-            return "";
+        string city;
+        public string Name(string s)
+        { 
+            city = s;
+            return WeatherTemp(city);
         }
         public string RespApi() 
         {
@@ -45,3 +47,4 @@ namespace OutdoorWeather1
         }
     }
 }
+*/

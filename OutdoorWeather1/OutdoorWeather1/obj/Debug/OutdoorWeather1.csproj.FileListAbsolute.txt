@@ -36,3 +36,23 @@ C:\Users\holli\Source\Repos\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj
 C:\Users\holli\Source\Repos\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\OutdoorWeather1.pdb
 C:\Users\holli\source\repos\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\PageSetting.g.cs
 C:\Users\holli\source\repos\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\PageSetting.baml
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\bin\Debug\OutdoorWeather1.exe.config
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\bin\Debug\OutdoorWeather1.exe
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\bin\Debug\OutdoorWeather1.pdb
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\bin\Debug\Newtonsoft.Json.dll
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\bin\Debug\Newtonsoft.Json.xml
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\OutdoorWeather1.csproj.AssemblyReference.cache
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\MainWindow.g.cs
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\PageSetting.g.cs
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\App.g.cs
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\OutdoorWeather1_MarkupCompile.cache
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\OutdoorWeather1_MarkupCompile.lref
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\MainWindow.baml
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\PageSetting.baml
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\OutdoorWeather1.g.resources
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\OutdoorWeather1.Properties.Resources.resources
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\OutdoorWeather1.csproj.GenerateResource.cache
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\OutdoorWeather1.csproj.CoreCompileInputs.cache
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\OutdoorWeather1.csproj.CopyComplete
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\OutdoorWeather1.exe
+C:\VISUAL STUDIO PROJECT\Weather-forecast\OutdoorWeather1\OutdoorWeather1\obj\Debug\OutdoorWeather1.pdb

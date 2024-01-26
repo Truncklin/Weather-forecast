@@ -63,6 +63,15 @@ Duration="0:0:0.10" />
         </Style>
     </Page.Resources>
     <Grid>
+        <Border HorizontalAlignment="Left" Height="250" VerticalAlignment="Top" Width="200" Opacity="0.2">
+            <Border.Effect>
+                <BlurEffect Radius="19" KernelType="Gaussian" RenderingBias="Quality"/>
+            </Border.Effect>
+            <Border.Background>
+                <ImageBrush ImageSource="/PageBackground.png" Stretch="None"/>
+            </Border.Background>
+
+        </Border>
         <TextBlock Text="Добавьте город в котором вы бы хотели видеть погоду" Margin="0,50,0,0" Width="150" Height="25"
                    HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <TextBlock Text="вы бы хотели видеть погоду" Margin="0,65,0,0" Width="155" Height="25"
@@ -89,14 +98,6 @@ TextWrapping="Wrap"
                 <ImageBrush ImageSource="/EnterButton.png" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
-        <Border HorizontalAlignment="Left" Height="250" VerticalAlignment="Top" Width="200" Opacity="0.2">
-            <Border.Effect>
-                <BlurEffect Radius="19" KernelType="Gaussian" RenderingBias="Quality"/>
-            </Border.Effect>
-            <Border.Background>
-                <ImageBrush ImageSource="/PageBackground.png" Stretch="None"/>
-            </Border.Background>
-
-        </Border>
+        
     </Grid>
 </Page>
